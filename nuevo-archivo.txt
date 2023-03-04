@@ -1,1 +1,193 @@
 este es el nuevo archivo
+
+bonus  S3 
+$ git clone https://github.com/guialexander/invie-github
+Cloning into 'invie-github'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (4/4), 4.53 KiB | 927.00 KiB/s, done.
+
+Alexander.Herrera@COLB002 MINGW64 ~
+$ ls
+'3D Objects'/             NTUSER.DAT{15adc3f3-cc46-11ec-a5e2-0c7a159ef731}.TM.blf
+ AppData/                 NTUSER.DAT{15adc3f3-cc46-11ec-a5e2-0c7a159ef731}.TMContainer00000000000000000001.regtrans-ms
+'Application Data'/       NTUSER.DAT{15adc3f3-cc46-11ec-a5e2-0c7a159ef731}.TMContainer00000000000000000002.regtrans-ms
+ Bonus/                   OneDrive/
+'Configuración local'@    OpenVPN/
+ Contacts/                Pictures/
+ Cookies@                 Plantillas@
+'Datos de programa'@      Reciente@
+ Desktop/                 S3/
+ Documents/              'Saved Games'/
+ Downloads/               Searches/
+'Entorno de red'@         SendTo@
+ Favorites/               Videos/
+ Impresoras@              carpeta_git/
+ IntelGraphicsProfiles/   ejercios/
+ Links/                   invie-github/
+'Menú Inicio'@            ntuser.dat.LOG1
+'Mis documentos'@         ntuser.dat.LOG2
+ Music/                   ntuser.ini
+ NTUSER.DAT
+
+Alexander.Herrera@COLB002 MINGW64 ~
+$ cd invie-github/
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git checkout -b nueva-funcionalidad
+Switched to a new branch 'nueva-funcionalidad'
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (nueva-funcionalidad)
+$ git brach
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (nueva-funcionalidad)
+$ git branch
+  main
+* nueva-funcionalidad
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (nueva-funcionalidad)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ touch nuevo-archivo.txt
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ cod .
+bash: cod: command not found
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ code .
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git add nuevo-archivo.txt
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   nuevo-archivo.txt
+
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git checkout nueva-funcionalidad
+Switched to branch 'nueva-funcionalidad'
+A       nuevo-archivo.txt
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (nueva-funcionalidad)
+$ git commit -m "Agregado nuevo archivo para la nueva funcionalidad"
+[nueva-funcionalidad 84a67f3] Agregado nuevo archivo para la nueva funcionalidad
+ Committer: Alexander Herrera <Alexander.Herrera@almundo.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 nuevo-archivo.txt
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (nueva-funcionalidad)
+$ git status
+On branch nueva-funcionalidad
+nothing to commit, working tree clean
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (nueva-funcionalidad)
+$ git log oneline
+fatal: ambiguous argument 'oneline': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (nueva-funcionalidad)
+$ git log
+commit 84a67f37773a077c5f43e8a6a7073b7705a911ae (HEAD -> nueva-funcionalidad)
+Author: Alexander Herrera <Alexander.Herrera@almundo.com>
+Date:   Fri Mar 3 19:56:11 2023 -0500
+
+    Agregado nuevo archivo para la nueva funcionalidad
+
+commit 1b899b4a8f4dc137467558bea293740beba4e85b (origin/main, origin/HEAD, main)
+Author: Guillermo Alexander Herrera <71296562+guialexander@users.noreply.github.com>
+Date:   Thu Mar 4 16:09:21 2021 -0500
+
+    Initial commit
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (nueva-funcionalidad)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git diff nueva-funcionalidad
+HEAD                  main                  nueva-funcionalidad   origin/HEAD           origin/main
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git diff nueva-archivo.txt
+fatal: ambiguous argument 'nueva-archivo.txt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git merge nueva-funcionalidad
+Updating 1b899b4..84a67f3
+Fast-forward
+ nuevo-archivo.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 nuevo-archivo.txt
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git log
+commit 84a67f37773a077c5f43e8a6a7073b7705a911ae (HEAD -> main, nueva-funcionalidad)
+Author: Alexander Herrera <Alexander.Herrera@almundo.com>
+Date:   Fri Mar 3 19:56:11 2023 -0500
+
+    Agregado nuevo archivo para la nueva funcionalidad
+
+commit 1b899b4a8f4dc137467558bea293740beba4e85b (origin/main, origin/HEAD)
+Author: Guillermo Alexander Herrera <71296562+guialexander@users.noreply.github.com>
+Date:   Thu Mar 4 16:09:21 2021 -0500
+
+    Initial commit
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ ^[[200~git remote add origin https://github.com/guialexander/S3bonus2023.git
+bash: $'\E[200~git': command not found
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git branch -M main
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git remote add origin https://github.com/guialexander/S3bonus2023.git
+error: remote origin already exists.
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git branch -M main
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 372 bytes | 74.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/guialexander/invie-github
+   1b899b4..84a67f3  main -> main
+branch 'main' set up to track 'origin/main'.
+
+Alexander.Herrera@COLB002 MINGW64 ~/invie-github (main)
